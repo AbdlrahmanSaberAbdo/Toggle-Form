@@ -1,0 +1,79 @@
+/*
+* Table of content
+* ===========================================
+* 01.Body
+* 02.ls-page (login-signup page) the size and the position of the form
+* 03.LS-PAGE h1 (titles of form (login | signup))
+* 04.LS-PAGE form input
+* 05.SELECTED to can change color between title's of (login - signup) form
+* 06.User
+* 07.OTHER
+*/
+
+body {
+  margin: 0;
+  padding: 0;
+  background-image: url('../back3.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed
+}
+
+.ls-page {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 400px;
+  min-height: 400px;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 80px 40px;
+}
+
+.ls-page h1 {
+  color: #fff;
+}
+
+.ls-page span {
+  cursor: pointer;
+}
+
+.ls-page [data-class="login"].selected {
+  color: #337ab7;
+}
+
+.ls-page [data-class="signup"].selected {
+  color: #5cb85c;
+}
+
+.ls-page form input {
+  width: 100%;
+  margin-bottom: 20px;
+  border: none;
+  background: transparent;
+  color: #fff;
+  border-bottom: 1px solid #fff;
+}
+
+.ls-page .signup {
+  display: none
+}
+
+.user {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  top: calc(-100px/2);
+  left: calc(35%);
+}
+
+::placeholder {
+  color: rgba(255, 255, 255, .5)
+}
+
+@media(max-height: 500px) {
+  .user {
+    display: none;
+  }
+}
